@@ -1,0 +1,118 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="icon" href="{% static 'favicon.ico' %}">
+
+    <title>COVID APP</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="position-relative">
+            <br/>
+            <form method="post" action="">
+                {% csrf_token %}
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example" name="selectedcountry">
+                    {% for country in myList %}
+                    <option>{{ country }}</option>
+         
+                  {% endfor %}
+      
+                  </select>
+                <center>
+                    <br />
+                    <input type="submit" class="btn btn-outline-danger btn-lg">
+                </center>
+
+            </form>
+        </div>
+
+    </div>
+
+
+
+    </div>
+    <div class="container">
+        <br />
+        <div class="row ">
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://image.freepik.com/free-photo/covid-19-outbreak-coronavirus-outbreak-background-as-dangerous-flu-strain-cases-as-pandemic-medical-health-risk-concept-with-disease-cells-as-3d-render_2307-418.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">New Case : {{new}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://image.freepik.com/free-photo/covid-19-outbreak-coronavirus-outbreak-background-as-dangerous-flu-strain-cases-as-pandemic-medical-health-risk-concept-with-disease-cells-as-3d-render_2307-418.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Active Case : {{active}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://image.freepik.com/free-photo/covid-19-outbreak-coronavirus-outbreak-background-as-dangerous-flu-strain-cases-as-pandemic-medical-health-risk-concept-with-disease-cells-as-3d-render_2307-418.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Total : {{total}}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://image.freepik.com/free-photo/covid-19-outbreak-coronavirus-outbreak-background-as-dangerous-flu-strain-cases-as-pandemic-medical-health-risk-concept-with-disease-cells-as-3d-render_2307-418.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Critical : {{critical}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://image.freepik.com/free-photo/covid-19-outbreak-coronavirus-outbreak-background-as-dangerous-flu-strain-cases-as-pandemic-medical-health-risk-concept-with-disease-cells-as-3d-render_2307-418.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Recovered : {{recovered}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://image.freepik.com/free-photo/covid-19-outbreak-coronavirus-outbreak-background-as-dangerous-flu-strain-cases-as-pandemic-medical-health-risk-concept-with-disease-cells-as-3d-render_2307-418.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Death : {{death}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
